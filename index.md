@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Home
-permalink: "/home"
 ---
 
 # Hello from Nashville 👋
@@ -15,6 +14,7 @@ I create tech solutions that drive business success. Experienced Full Stack Engi
 **Skills**: Domain Driven Design, Test Driven Development, Refactoring, Object Oriented Programming, Design Patterns, System Architecture
 
 [View my resume](./assets/images/resume.pdf){:target="_blank"}
+
 
 ___
 

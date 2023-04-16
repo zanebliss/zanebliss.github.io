@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+permalink: "/home"
 ---
 
 # Hello from Nashville 👋

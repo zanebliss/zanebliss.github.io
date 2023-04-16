@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Roboto Mono', sans-serif;
     margin: auto;
     padding: 20px;
     max-width: 720px;
@@ -276,7 +276,7 @@ ul.discover-posts li small a {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #01242e;
+        background-color: #353535;
         color: #ddd;
     }
 

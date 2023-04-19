@@ -4,7 +4,7 @@
 title: Zane Bliss ☕️
 description: The personal site of Zane Bliss Software Engineer
 # baseurl: "/jekyllBear" # the subpath of your site, e.g. /blog/
-url: "https://www.zaneblisscodes.com" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 # host: 0.0.0.0
 
 #########################

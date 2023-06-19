@@ -10,7 +10,7 @@ Here is the description of View Component, from the documentation.
 
 > A framework for creating reusable, testable & encapsulated view components, built to integrate seamlessly with Ruby on Rails.
 
-A component is composed of a component Ruby class, component markup (in `.html.erb`), and a call to render the component in a view. Below is a sample implementation from the documentation.
+A View Component is composed of a Ruby class, a template (in `.html.erb`), and a call to render the component in a Rails view. Below is a sample implementation from View Component's documentation.
 
 _Component class_
 ```ruby
@@ -27,23 +27,25 @@ _Component markup_
 <%# app/components/message_component.html.erb %>
 <h1>Hello, <%= @name %>!</h1>
 ```
+
+_Instantiated and passed to `render`_
 ```erb
 <%# app/views/demo/index.html.erb %>
 <%= render(MessageComponent.new(name: "World")) %>
 ```
 
-Which produces the following markup.
+_Produces the following markup_
 ```html
 <h1>Hello, World!</h1>
 ```
 
 ## Conventional usage of View Components
 
-In the Ruby on Rails codebases that I've worked on, I've had the opportunity View Components extensively. There are two typical use cases of View Components that I've seen. First is a more generic component which is primarily defined by the attributes passed into it. This could include buttons, pagination components, or links.
+In the Ruby on Rails codebases that I've worked on, I've had the opportunity View Components extensively. There are typically two use cases of View Components I've observed. First is a more generic component which is primarily defined by generic attributes passed into it that are not related to some unique business object. Examples include generic buttons, pagination components, or links.
 
-Another variant of a View Component is defined primarily by an object that might have some relationship to the domain and is more complex. This could be something like an event or an about me card. These typically have several related attributes and may likely already be represented by a domain object.
+The second use case of View Components is defined primarily by an object that has a relationship to the domain and is more complex and is conceptually coupled. This could be something like an event or an 'About me' card. These typically have several related attributes and may already be represented by a domain object.
 
-Although View Components have many benefits, there are sometimes cases where following the conventional approach becomes unwieldy, especially in cases like the second, where there is a component that is representing an object with several related attributes. Here is a contrived example of an event component, where the purpose of the component is to represent an event that can be attended.
+Although View Components have many benefits, there are sometimes cases where following the conventional approach in View Component's documentation becomes unwieldy. Especially in cases like the second, where there is a component that is representing an object with several related attributes. Here is a contrived example of an event component.
 
 _Component class_
 ```ruby
@@ -108,7 +110,7 @@ Even though this is a contrived example, in reality, I've seen cases where the a
 %>
 ```
 
-Unfortunately, this can introduce the question: "Where does the presentational code live"? In the object? In the View Component? In the markdown? In a module? Inevitably some of the data in the object needs to be capitalized or turned into currency, or pretty printed, etc. This can lead to code in View Components like below.
+Unfortunately, this can beg the question: "Where does the presentational code live"? In the object? In the View Component? In the markdown? In a module? Inevitably some of the data in the object needs to be capitalized or turned into currency, or pretty printed, etc. This can lead to code in View Components that is more related to the object being presented then the View Component itself.
 
 At face value, this doesn't seem like much of an issue, but it can lead to awkward separation of concerns, strange method naming, and annoying testing, among other things. The View Component should be concerned about rendering a component, not about the presentational concerns of the object it is representing.
 
@@ -118,7 +120,7 @@ As an alternative to this frustration, consider using Object-backed View Compone
 
 When you have a UI component that is conceptually related to a Ruby object, instead of passing in several attributes to the View Component constructor, consider passing in the entire object, and delegating method calls using ActiveSupport `delegate` ([source](https://www.rubydoc.info/gems/activesupport/Module:delegate)).
 
-Following the example from before, suppose you have an event you need to render. Instead of putting the presentational logic in the View Component, instead keep it in the object (as an alternative, you could use the decorator pattern).
+Following the example from before, suppose you have an event you need to render. Instead of putting the presentational logic in the View Component, instead keep it in the object itself (as an alternative, you could also decorate the object using the decorator pattern).
 
 ```ruby
 # app/models/event.rb
@@ -148,7 +150,7 @@ class Event
 end
 ```
 
-Instead of passing in each of the event attributes, instead pass in the event instance.
+Instead of passing in each of the event attributes, instead, pass in the event instance.
 
 ```erb
 <%# app/views/demo/index.html.erb %>
@@ -193,6 +195,6 @@ Now you have a clearer separation of concerns, unit testing the component will b
 
 ## Conclusion
 
-Carefully consider when is appropriate to use this pattern. It kind of goes against some of the standard approaches demonstrated in the View Component documentation. Do you need a custom component that is conceptually coupled to a domain object? Consider using it. Do you need a generic component with a small number of attributes? Eh, it's probably overkill.
+Carefully consider when is appropriate to use this pattern. It kind of goes against some of the standard approaches demonstrated in the View Component documentation. Do you need a custom component that is conceptually coupled to a domain object? Consider using it. Do you need a generic component with a small number of attributes? This might be overkill.
 
 Thanks for reading. Please reach out to me at [zanebliss@icloud.com](mailto:zanebliss@icloud.com) if you have questions or comments! I'd love to chat.

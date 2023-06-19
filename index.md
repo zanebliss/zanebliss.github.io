@@ -5,7 +5,7 @@ title: Home
 
 # Hello from Nashville 👋
 
-I creating tech solutions that drive business success. I'm a Full Stack Software Engineer with a passion for system architecture, coding best practices, and empowering others.
+My name is Zane. I'm a full stack software engineer based in Nashville, TN. I'm passionate about creating technology solutions that drive business success. I get excited about system architecture, leaning into best practices and language paradigms, and finding ways to empower and encourage growth in those around me.
 
 **Tech**: Ruby, Ruby on Rails, Rspec, Javascript, React, Jest, HTML/CSS, AWS
 
@@ -15,14 +15,13 @@ I creating tech solutions that drive business success. I'm a Full Stack Software
 
 [View my resume](./assets/images/resume.pdf){:target="_blank"}
 
-
 ___
 
 ## About me
 
-![image portrait at Horseshoe Bend](./assets/images/portrait.jpg)  
+![image portrait at Horseshoe Bend](./assets/images/portrait.jpg)
 _(At Horseshoe Bend in Arizona)_
 
-I graduated from [Nashville Software School](https://nashvillesoftwareschool.com/) in 2020 and have been working professionally as a Software Engineer specializing in Full Stack web apps using Ruby on Rails.
+I graduated from [Nashville Software School](https://nashvillesoftwareschool.com/) in 2020 and have been working professionally building web applications and services in Ruby, Ruby on Rails, Java, and Spring.
 
-Outside of work I enjoy being outdoors hiking and backpacking, studying tech and startups, traveling, and drinking coffee.
+Outside of software I enjoy being outdoors hiking and backpacking, traveling, and drinking coffee and talking about why everyone should try the [AeroPress Go](https://aeropress.com/products/aeropress-go-travel-coffee-press) (my favorite coffee device).

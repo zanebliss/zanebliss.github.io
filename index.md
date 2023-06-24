@@ -7,9 +7,7 @@ title: Home
 
 My name is Zane. I'm a full stack software engineer based in Nashville, TN. I'm passionate about creating technology solutions that drive business success. I get excited about system architecture, leaning into best practices and language paradigms, and finding ways to empower and encourage growth in those around me.
 
-**Tech**: Ruby, Ruby on Rails, Rspec, Javascript, React, Jest, HTML/CSS, AWS
-
-**Tech I'm interested in**: Java, Spring, Python, Kafka
+**Tech**: Ruby, Ruby on Rails, RSpec, JavaScript, React, Jest, HTML, CSS, AWS
 
 **Skills**: Domain Driven Design, Test Driven Development, Refactoring, Object Oriented Programming, Design Patterns, System Architecture
 

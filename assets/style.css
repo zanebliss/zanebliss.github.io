@@ -140,7 +140,7 @@ img {
 code {
     font-family: monospace;
     padding: 2px;
-    background-color: #f2f2f2;
+    background-color: #2f2f2f;
     color: #222;
     border-radius: 3px;
 }
@@ -148,7 +148,7 @@ code {
 .highlight,
 .code {
     padding: 1px 15px;
-    background-color: #f2f2f2;
+    background-color: #2f2f2f;
     color: #222;
     border-radius: 3px;
     margin-block-start: 1em;
@@ -296,7 +296,8 @@ ul.discover-posts li small a {
     }
 
     code {
-        background-color: #777;
+        background-color: transparent;
+	color: white
     }
 
     .highlight {

@@ -18,6 +18,13 @@ whitelist:
 
 markdown: kramdown
 
+highlighter: rouge
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    line_numbers: false
+
 compress_html:
   clippings: all
   comments: [""]

@@ -39,7 +39,7 @@ end
 ```
 
 Then, using IRB, we get the following.
-```
+```ruby
 irb(main):009:0> reformat_log('[Error]: Uh oh, something went wrong!')
 => "Uh oh, something went wrong! (error)"
 ```

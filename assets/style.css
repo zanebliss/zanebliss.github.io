@@ -140,16 +140,16 @@ img {
 code {
     font-family: monospace;
     padding: 2px;
-    background-color: #2f2f2f;
-    color: #222;
+    background-color: transparent;
+    color: inherit;
     border-radius: 3px;
 }
 
 .highlight,
 .code {
     padding: 1px 15px;
-    background-color: #2f2f2f;
-    color: #222;
+    background-color: transparent;
+    color: inherit;
     border-radius: 3px;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -297,16 +297,17 @@ ul.discover-posts li small a {
 
     code {
         background-color: transparent;
-	color: white
+        color: #f8f8f2;
     }
 
-    .highlight {
-        background-color: #444;
-    }
+    /* Remove conflicting highlight backgrounds - let Rouge CSS handle it */
 
     pre code {
-        color: #ddd;
+        color: inherit;
+        background-color: transparent;
     }
+
+    /* Rouge syntax highlighting handled by separate rouge.css file */
 
     blockquote {
         color: #ccc;
